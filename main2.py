@@ -11,13 +11,9 @@ SPACE_COLOR = "#010108"
 try:
     with open('solar_system_planets.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
-except:
-    data = json_create_file()
-
-try:
     create_planets_with_color(data)
 except:
-    pass
+    data = json_create_file()
 
 
 class Planet(pygame.sprite.Sprite):
@@ -31,7 +27,7 @@ class Planet(pygame.sprite.Sprite):
         self.density = density
 
         # Создаем поверхность для планеты
-        self.image = pygame.Surface((size * 2, size * 2))
+        self.image = pygame.Surface((size * 2, size * 2), pygame.SRCALPHA)
         pygame.draw.circle(self.image, color, (size, size), size)
 
         self.rect = self.image.get_rect()
