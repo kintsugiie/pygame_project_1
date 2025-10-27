@@ -4,65 +4,113 @@ def json_create_file():
     data = {
         "Sun": {
             "color": "#ffff00",
-            "pos": [408, 275],
+            "pos": [
+                500,
+                400
+            ],
             "density": 1.4
         },
-        'planets': {
+        "planets": {
             "Mercury": {
                 "orbit_radius": 80,
-                "rotation_speed": 0.02,
-                "size": 5,
-                "density": 5.43
+                "rotation_speed": 4.0,
+                "size": 8,
+                "density": 7.1,
+                "color": [
+                    218,
+                    165,
+                    32,
+                    255
+                  ]
             },
             "Venus": {
-                "orbit_radius": 120,
-                "rotation_speed": 0.015,
-                "size": 9,
-                "density": 5.24
+                "orbit_radius": 110,
+                "rotation_speed": 3.0,
+                "size": 11,
+                "density": 5.04,
+                "color": [
+                    80,
+                    188,
+                    107,
+                    255
+                ]
             },
             "Earth": {
                 "orbit_radius": 160,
-                "rotation_speed": 0.01,
-                "size": 10,
-                "density": 5.51
+                "rotation_speed": 2.5,
+                "size": 9,
+                "density": 5.91,
+                "color": [
+                    140,
+                    209,
+                    80,
+                    255
+                ]
             },
             "Mars": {
-                "orbit_radius": 200,
-                "rotation_speed": 0.008,
-                "size": 6,
-                "density": 3.93
-                },
+                "orbit_radius": 190,
+                "rotation_speed": 2.0,
+                "size": 7,
+                "density": 3.93,
+                "color": [
+                    40,
+                    151,
+                    135,
+                    255
+                ]
+            },
             "Jupiter": {
-                "orbit_radius": 280,
-                "rotation_speed": 0.025,
-                "size": 20,
-                "density": 1.33
-                },
+                "orbit_radius": 230,
+                "rotation_speed": 1.2,
+                "size": 18,
+                "density": 2.5,
+                "color": [
+                    52,
+                    98,
+                    139,
+                    255
+                ]
+            },
             "Saturn": {
-                "orbit_radius": 340,
-                "rotation_speed": 0.022,
-                "size": 17,
-                "density": 0.69
-                },
+                "orbit_radius": 290,
+                "rotation_speed": 0.9,
+                "size": 23,
+                "density": 0.39,
+                "color": [
+                    68,
+                    1,
+                    84,
+                    255
+                ]
+            },
             "Uranus": {
-                "orbit_radius": 380,
-                "rotation_speed": 0.018,
-                "size": 12,
-                "density": 1.27
-                },
+                "orbit_radius": 340,
+                "rotation_speed": 0.7,
+                "size": 14,
+                "density": 1.07,
+                "color": [
+                    64,
+                    32,
+                    105,
+                    255
+                ]
+            },
             "Neptune": {
-                "orbit_radius": 420,
-                "rotation_speed": 0.016,
-                "size": 11,
-                "density": 1.64
-                }
+                "orbit_radius": 380,
+                "rotation_speed": 0.5,
+                "size": 13,
+                "density": 1.64,
+                "color": [
+                    61,
+                    60,
+                    124,
+                    255
+                ]
+            }
         }
     }
 
-    # Сохраняем в JSON файл
     with open('solar_system_planets.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
-
-    print("Файл 'solar_system_planets.json' успешно создан!")
+    print('made it')
     return data
-

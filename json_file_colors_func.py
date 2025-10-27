@@ -8,7 +8,7 @@ def create_planets_with_color(data):
     max_density = max(densities)
 
     colormap = mcolors.LinearSegmentedColormap.from_list('density_colormap',
-                                                         ['#440154', '#3b528b', '#21918c', '#5ec962', '#fde725'])
+                                                         ['#440154', '#3b528b', '#21918c', '#5ec962', '#daa520'])
 
     for planet in data['planets']:
         density = data['planets'][planet]['density']
